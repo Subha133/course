@@ -14,7 +14,7 @@ export const metadata = {
   description: "30-day personal branding course for medical professionals.",
 };
 
-export default function Home() {
+export default function Homepage() {
   return (
     <main className="min-h-screen bg-white selection:bg-blue-100 selection:text-blue-900">
       <Navbar />

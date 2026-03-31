@@ -35,7 +35,7 @@ export const handleBuyNow = async ({
     setLoading(true);
 
     // 1. Load Razorpay script
-    const res = await loadRazorpayScript();
+    const res = await    loadRazorpayScript();
     if (!res) {
       throw new Error("Razorpay SDK failed to load. Are you online?");
     }
@@ -73,6 +73,7 @@ export const handleBuyNow = async ({
               razorpay_payment_id: response.razorpay_payment_id,
               razorpay_signature: response.razorpay_signature,
               user,
+              amount: order.amount, 
             }),
           });
           const result = await verifyResponse.json();
